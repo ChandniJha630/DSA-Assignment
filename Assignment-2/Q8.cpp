@@ -7,6 +7,11 @@ public:
             maxi=max(maxi,nums[i]);
             mini=min(mini,nums[i]);
         }
-        return mini>maxi? 0: maxi-mini-2*k;
+         int ans = (maxi-k) - (mini + k);
+       
+       if(ans > 0){
+        return ans;
+       }
+       return 0;
     }
 };
